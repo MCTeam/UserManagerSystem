@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FDA4847816907EB2001FB200 /* MCUserCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA4847716907EB2001FB200 /* MCUserCalculator.m */; };
 		FDF1E98B168F38F60097B5E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF1E98A168F38F60097B5E0 /* UIKit.framework */; };
 		FDF1E98D168F38F60097B5E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF1E98C168F38F60097B5E0 /* Foundation.framework */; };
 		FDF1E98F168F38F60097B5E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF1E98E168F38F60097B5E0 /* CoreGraphics.framework */; };
@@ -15,22 +16,36 @@
 		FDF1E99B168F38F60097B5E0 /* UserManagerSystemAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF1E99A168F38F60097B5E0 /* UserManagerSystemAppDelegate.m */; };
 		FDF1E99E168F38F60097B5E0 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF1E99C168F38F60097B5E0 /* MainStoryboard.storyboard */; };
 		FDF1E9A1168F38F60097B5E0 /* UserManagerSystemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF1E9A0168F38F60097B5E0 /* UserManagerSystemViewController.m */; };
+		FDF1E9AA168F43250097B5E0 /* MCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF1E9A9168F43250097B5E0 /* MCUser.m */; };
+		FDF1E9B0168F4E100097B5E0 /* MCScore.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF1E9AF168F4E100097B5E0 /* MCScore.m */; };
+		FDF1E9B3168F54FC0097B5E0 /* MCUserManagerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF1E9B2168F54FC0097B5E0 /* MCUserManagerModel.m */; };
+		FDF1E9B6168F591C0097B5E0 /* MCDBController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF1E9B5168F591C0097B5E0 /* MCDBController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FDA4847616907EB2001FB200 /* MCUserCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUserCalculator.h; sourceTree = "<group>"; };
+		FDA4847716907EB2001FB200 /* MCUserCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUserCalculator.m; sourceTree = "<group>"; };
 		FDF1E986168F38F60097B5E0 /* UserManagerSystem2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserManagerSystem2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF1E98A168F38F60097B5E0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FDF1E98C168F38F60097B5E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FDF1E98E168F38F60097B5E0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		FDF1E992168F38F60097B5E0 /* UserManagerSystem2-Info.plist */ = {isa = PBXFileReference; path = "UserManagerSystem2-Info.plist"; sourceTree = "<group>"; };
+		FDF1E992168F38F60097B5E0 /* UserManagerSystem2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UserManagerSystem2-Info.plist"; sourceTree = "<group>"; };
 		FDF1E994168F38F60097B5E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FDF1E996168F38F60097B5E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FDF1E998168F38F60097B5E0 /* UserManagerSystem2-Prefix.pch */ = {isa = PBXFileReference; path = "UserManagerSystem2-Prefix.pch"; sourceTree = "<group>"; };
-		FDF1E999168F38F60097B5E0 /* UserManagerSystemAppDelegate.h */ = {isa = PBXFileReference; path = UserManagerSystemAppDelegate.h; sourceTree = "<group>"; };
+		FDF1E998168F38F60097B5E0 /* UserManagerSystem2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UserManagerSystem2-Prefix.pch"; sourceTree = "<group>"; };
+		FDF1E999168F38F60097B5E0 /* UserManagerSystemAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserManagerSystemAppDelegate.h; sourceTree = "<group>"; };
 		FDF1E99A168F38F60097B5E0 /* UserManagerSystemAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserManagerSystemAppDelegate.m; sourceTree = "<group>"; };
 		FDF1E99D168F38F60097B5E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		FDF1E99F168F38F60097B5E0 /* UserManagerSystemViewController.h */ = {isa = PBXFileReference; path = UserManagerSystemViewController.h; sourceTree = "<group>"; };
+		FDF1E99F168F38F60097B5E0 /* UserManagerSystemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserManagerSystemViewController.h; sourceTree = "<group>"; };
 		FDF1E9A0168F38F60097B5E0 /* UserManagerSystemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserManagerSystemViewController.m; sourceTree = "<group>"; };
+		FDF1E9A8168F43250097B5E0 /* MCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUser.h; sourceTree = "<group>"; };
+		FDF1E9A9168F43250097B5E0 /* MCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUser.m; sourceTree = "<group>"; };
+		FDF1E9AE168F4E100097B5E0 /* MCScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCScore.h; sourceTree = "<group>"; };
+		FDF1E9AF168F4E100097B5E0 /* MCScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCScore.m; sourceTree = "<group>"; };
+		FDF1E9B1168F54FC0097B5E0 /* MCUserManagerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUserManagerModel.h; sourceTree = "<group>"; };
+		FDF1E9B2168F54FC0097B5E0 /* MCUserManagerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUserManagerModel.m; sourceTree = "<group>"; };
+		FDF1E9B4168F591C0097B5E0 /* MCDBController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDBController.h; sourceTree = "<group>"; };
+		FDF1E9B5168F591C0097B5E0 /* MCDBController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDBController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +92,7 @@
 		FDF1E990168F38F60097B5E0 /* UserManagerSystem2 */ = {
 			isa = PBXGroup;
 			children = (
+				FDF1E9A7168F42590097B5E0 /* MCUserManagerModel */,
 				FDF1E999168F38F60097B5E0 /* UserManagerSystemAppDelegate.h */,
 				FDF1E99A168F38F60097B5E0 /* UserManagerSystemAppDelegate.m */,
 				FDF1E99C168F38F60097B5E0 /* MainStoryboard.storyboard */,
@@ -96,6 +112,23 @@
 				FDF1E998168F38F60097B5E0 /* UserManagerSystem2-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FDF1E9A7168F42590097B5E0 /* MCUserManagerModel */ = {
+			isa = PBXGroup;
+			children = (
+				FDF1E9A8168F43250097B5E0 /* MCUser.h */,
+				FDF1E9A9168F43250097B5E0 /* MCUser.m */,
+				FDF1E9AE168F4E100097B5E0 /* MCScore.h */,
+				FDF1E9AF168F4E100097B5E0 /* MCScore.m */,
+				FDF1E9B1168F54FC0097B5E0 /* MCUserManagerModel.h */,
+				FDF1E9B2168F54FC0097B5E0 /* MCUserManagerModel.m */,
+				FDF1E9B4168F591C0097B5E0 /* MCDBController.h */,
+				FDF1E9B5168F591C0097B5E0 /* MCDBController.m */,
+				FDA4847616907EB2001FB200 /* MCUserCalculator.h */,
+				FDA4847716907EB2001FB200 /* MCUserCalculator.m */,
+			);
+			name = MCUserManagerModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +198,11 @@
 				FDF1E997168F38F60097B5E0 /* main.m in Sources */,
 				FDF1E99B168F38F60097B5E0 /* UserManagerSystemAppDelegate.m in Sources */,
 				FDF1E9A1168F38F60097B5E0 /* UserManagerSystemViewController.m in Sources */,
+				FDF1E9AA168F43250097B5E0 /* MCUser.m in Sources */,
+				FDF1E9B0168F4E100097B5E0 /* MCScore.m in Sources */,
+				FDF1E9B3168F54FC0097B5E0 /* MCUserManagerModel.m in Sources */,
+				FDF1E9B6168F591C0097B5E0 /* MCDBController.m in Sources */,
+				FDA4847816907EB2001FB200 /* MCUserCalculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +279,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UserManagerSystem2/UserManagerSystem2-Prefix.pch";
 				INFOPLIST_FILE = "UserManagerSystem2/UserManagerSystem2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -252,6 +291,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UserManagerSystem2/UserManagerSystem2-Prefix.pch";
 				INFOPLIST_FILE = "UserManagerSystem2/UserManagerSystem2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -276,6 +316,7 @@
 				FDF1E9A6168F38F60097B5E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

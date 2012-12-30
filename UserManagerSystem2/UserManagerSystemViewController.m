@@ -13,6 +13,14 @@
 @end
 
 @implementation UserManagerSystemViewController
+@synthesize scoreTable;
+@synthesize insertRecordUserNameField;
+@synthesize insertRecordTimeField;
+@synthesize insertRecordMoveField;
+@synthesize currentUserLabel;
+@synthesize totalGamesLabel;
+@synthesize totalTimesLabel;
+@synthesize totalMovesLabel;
 
 - (void)viewDidLoad
 {
@@ -22,6 +30,14 @@
 
 - (void)viewDidUnload
 {
+    [self setScoreTable:nil];
+    [self setInsertRecordUserNameField:nil];
+    [self setInsertRecordTimeField:nil];
+    [self setInsertRecordMoveField:nil];
+    [self setCurrentUserLabel:nil];
+    [self setTotalGamesLabel:nil];
+    [self setTotalTimesLabel:nil];
+    [self setTotalMovesLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -31,4 +47,27 @@
     return YES;
 }
 
+- (void)dealloc {
+    [scoreTable release];
+    [insertRecordUserNameField release];
+    [insertRecordTimeField release];
+    [insertRecordMoveField release];
+    [currentUserLabel release];
+    [totalGamesLabel release];
+    [totalTimesLabel release];
+    [totalMovesLabel release];
+    [super dealloc];
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 3;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"] autorelease];
+    
+    return cell;
+}
 @end
