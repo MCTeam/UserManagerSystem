@@ -18,7 +18,7 @@
 @property (nonatomic) double speed;
 @property (retain, nonatomic) NSString *date;
 
-- (void) scoreID:(NSInteger)sID userID:(NSInteger)uID score:(NSInteger)SCORE move:(NSInteger)MOVE time:(double)TIME speed:(double)SPEED date:(NSString*)DATE;
+- (id) initWithScoreID:(NSInteger)_sID userID:(NSInteger)_uID score:(NSInteger)_score move:(NSInteger)_move time:(double)_time speed:(double)_speed date:(NSString*)_date;
 
 
 @end

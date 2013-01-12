@@ -16,6 +16,6 @@
 @property (nonatomic) NSInteger totalMoves;
 @property (nonatomic) double totalTimes;     //seconds
 
-- (void)User:(NSInteger)ID UserName:(NSString*)NAME UserSex:(NSString*)Sex totalGames:(NSInteger)GAMES totalMoves:(NSInteger)MOVES totalTimes:(double)TIMES;
+- (id)initWithUserID:(NSInteger)_ID UserName:(NSString*)_name UserSex:(NSString*)_sex totalGames:(NSInteger)_games totalMoves:(NSInteger)_moves totalTimes:(double)_times;
 
 @end

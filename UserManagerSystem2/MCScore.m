@@ -18,22 +18,28 @@
 @synthesize speed;
 @synthesize date;
 
+- (id)initWithScoreID:(NSInteger)_sID userID:(NSInteger)_uID score:(NSInteger)_score move:(NSInteger)_move time:(double)_time speed:(double)_speed date:(NSString *)_date
+{
+    if (self = [self init]) {
+
+        [_date retain];
+        [date release];
+        
+        self.scoreID = _sID;
+        self.userID = _uID;
+        self.score = _score;
+        self.move = _move;
+        self.time = _time;
+        self.speed = _speed;
+        self.date = _date;
+    }
+    return self;
+}
 
 - (void)dealloc
 {
     [date release];
     [super dealloc];
-}
-
-- (void)scoreID:(NSInteger)sID userID:(NSInteger)uID score:(NSInteger)SCORE move:(NSInteger)MOVE time:(double)TIME speed:(double)SPEED date:(NSString *)DATE
-{
-    self.scoreID = sID;
-    self.userID = uID;
-    self.score = SCORE;
-    self.move = MOVE;
-    self.time = TIME;
-    self.speed = SPEED;
-    self.date = DATE;
 }
 
 @end

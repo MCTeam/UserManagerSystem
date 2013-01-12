@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MCUserManagerController.h"
+#import "PopCreateUserViewController.h"
+#import "PopChangeUserViewController.h"
 
 @interface UserManagerSystemViewController : UIViewController
-    <UITableViewDelegate, UITableViewDataSource>
+    <UITableViewDelegate, UITableViewDataSource, UIPopoverControllerDelegate>
+{
+    MCUserManagerController *userManagerController;
+}
 
 @property (retain, nonatomic) IBOutlet UITableView *scoreTable;
 
@@ -22,4 +28,10 @@
 @property (retain, nonatomic) IBOutlet UILabel *totalGamesLabel;
 @property (retain, nonatomic) IBOutlet UILabel *totalTimesLabel;
 @property (retain, nonatomic) IBOutlet UILabel *totalMovesLabel;
+
+@property (retain, nonatomic) UIPopoverController *createUserPopover;
+@property (retain, nonatomic) UIPopoverController *changeUserPopover;
+
+- (IBAction)createUserPress:(id)sender;
+- (IBAction)changeUserPress:(id)sender;
 @end

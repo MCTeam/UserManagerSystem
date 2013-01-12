@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD0BE80E1695EBA3009CD589 /* PopCreateUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0BE80C1695EBA2009CD589 /* PopCreateUserViewController.m */; };
+		FD0BE80F1695EBA3009CD589 /* PopCreateUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD0BE80D1695EBA3009CD589 /* PopCreateUserViewController.xib */; };
+		FD0BE8141695EF2E009CD589 /* PopChangeUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0BE8121695EF2E009CD589 /* PopChangeUserViewController.m */; };
+		FD0BE8151695EF2E009CD589 /* PopChangeUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD0BE8131695EF2E009CD589 /* PopChangeUserViewController.xib */; };
+		FD7EEB031690DB0300CC5496 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7EEB021690DB0300CC5496 /* libsqlite3.dylib */; };
 		FDA4847816907EB2001FB200 /* MCUserCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA4847716907EB2001FB200 /* MCUserCalculator.m */; };
+		FDA4847D16908C93001FB200 /* MCUserManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA4847C16908C93001FB200 /* MCUserManagerController.m */; };
 		FDF1E98B168F38F60097B5E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF1E98A168F38F60097B5E0 /* UIKit.framework */; };
 		FDF1E98D168F38F60097B5E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF1E98C168F38F60097B5E0 /* Foundation.framework */; };
 		FDF1E98F168F38F60097B5E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF1E98E168F38F60097B5E0 /* CoreGraphics.framework */; };
@@ -23,8 +29,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD0BE80B1695EBA2009CD589 /* PopCreateUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopCreateUserViewController.h; sourceTree = "<group>"; };
+		FD0BE80C1695EBA2009CD589 /* PopCreateUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopCreateUserViewController.m; sourceTree = "<group>"; };
+		FD0BE80D1695EBA3009CD589 /* PopCreateUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopCreateUserViewController.xib; sourceTree = "<group>"; };
+		FD0BE8111695EF2E009CD589 /* PopChangeUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopChangeUserViewController.h; sourceTree = "<group>"; };
+		FD0BE8121695EF2E009CD589 /* PopChangeUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopChangeUserViewController.m; sourceTree = "<group>"; };
+		FD0BE8131695EF2E009CD589 /* PopChangeUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopChangeUserViewController.xib; sourceTree = "<group>"; };
+		FD7EEB021690DB0300CC5496 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		FDA4847616907EB2001FB200 /* MCUserCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUserCalculator.h; sourceTree = "<group>"; };
 		FDA4847716907EB2001FB200 /* MCUserCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUserCalculator.m; sourceTree = "<group>"; };
+		FDA4847B16908C93001FB200 /* MCUserManagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUserManagerController.h; sourceTree = "<group>"; };
+		FDA4847C16908C93001FB200 /* MCUserManagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUserManagerController.m; sourceTree = "<group>"; };
 		FDF1E986168F38F60097B5E0 /* UserManagerSystem2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserManagerSystem2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF1E98A168F38F60097B5E0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FDF1E98C168F38F60097B5E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD7EEB031690DB0300CC5496 /* libsqlite3.dylib in Frameworks */,
 				FDF1E98B168F38F60097B5E0 /* UIKit.framework in Frameworks */,
 				FDF1E98D168F38F60097B5E0 /* Foundation.framework in Frameworks */,
 				FDF1E98F168F38F60097B5E0 /* CoreGraphics.framework in Frameworks */,
@@ -62,6 +78,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FDA4847A16908C23001FB200 /* DataStructureClass */ = {
+			isa = PBXGroup;
+			children = (
+				FDF1E9A8168F43250097B5E0 /* MCUser.h */,
+				FDF1E9A9168F43250097B5E0 /* MCUser.m */,
+				FDF1E9AE168F4E100097B5E0 /* MCScore.h */,
+				FDF1E9AF168F4E100097B5E0 /* MCScore.m */,
+			);
+			name = DataStructureClass;
+			sourceTree = "<group>";
+		};
 		FDF1E97B168F38F60097B5E0 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +109,7 @@
 		FDF1E989168F38F60097B5E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FD7EEB021690DB0300CC5496 /* libsqlite3.dylib */,
 				FDF1E98A168F38F60097B5E0 /* UIKit.framework */,
 				FDF1E98C168F38F60097B5E0 /* Foundation.framework */,
 				FDF1E98E168F38F60097B5E0 /* CoreGraphics.framework */,
@@ -92,12 +120,19 @@
 		FDF1E990168F38F60097B5E0 /* UserManagerSystem2 */ = {
 			isa = PBXGroup;
 			children = (
-				FDF1E9A7168F42590097B5E0 /* MCUserManagerModel */,
+				FDA4847A16908C23001FB200 /* DataStructureClass */,
+				FDF1E9A7168F42590097B5E0 /* Classes */,
 				FDF1E999168F38F60097B5E0 /* UserManagerSystemAppDelegate.h */,
 				FDF1E99A168F38F60097B5E0 /* UserManagerSystemAppDelegate.m */,
 				FDF1E99C168F38F60097B5E0 /* MainStoryboard.storyboard */,
 				FDF1E99F168F38F60097B5E0 /* UserManagerSystemViewController.h */,
 				FDF1E9A0168F38F60097B5E0 /* UserManagerSystemViewController.m */,
+				FD0BE80B1695EBA2009CD589 /* PopCreateUserViewController.h */,
+				FD0BE80C1695EBA2009CD589 /* PopCreateUserViewController.m */,
+				FD0BE80D1695EBA3009CD589 /* PopCreateUserViewController.xib */,
+				FD0BE8111695EF2E009CD589 /* PopChangeUserViewController.h */,
+				FD0BE8121695EF2E009CD589 /* PopChangeUserViewController.m */,
+				FD0BE8131695EF2E009CD589 /* PopChangeUserViewController.xib */,
 				FDF1E991168F38F60097B5E0 /* Supporting Files */,
 			);
 			path = UserManagerSystem2;
@@ -114,21 +149,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FDF1E9A7168F42590097B5E0 /* MCUserManagerModel */ = {
+		FDF1E9A7168F42590097B5E0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				FDF1E9A8168F43250097B5E0 /* MCUser.h */,
-				FDF1E9A9168F43250097B5E0 /* MCUser.m */,
-				FDF1E9AE168F4E100097B5E0 /* MCScore.h */,
-				FDF1E9AF168F4E100097B5E0 /* MCScore.m */,
 				FDF1E9B1168F54FC0097B5E0 /* MCUserManagerModel.h */,
 				FDF1E9B2168F54FC0097B5E0 /* MCUserManagerModel.m */,
 				FDF1E9B4168F591C0097B5E0 /* MCDBController.h */,
 				FDF1E9B5168F591C0097B5E0 /* MCDBController.m */,
 				FDA4847616907EB2001FB200 /* MCUserCalculator.h */,
 				FDA4847716907EB2001FB200 /* MCUserCalculator.m */,
+				FDA4847B16908C93001FB200 /* MCUserManagerController.h */,
+				FDA4847C16908C93001FB200 /* MCUserManagerController.m */,
 			);
-			name = MCUserManagerModel;
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +218,8 @@
 			files = (
 				FDF1E995168F38F60097B5E0 /* InfoPlist.strings in Resources */,
 				FDF1E99E168F38F60097B5E0 /* MainStoryboard.storyboard in Resources */,
+				FD0BE80F1695EBA3009CD589 /* PopCreateUserViewController.xib in Resources */,
+				FD0BE8151695EF2E009CD589 /* PopChangeUserViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +238,9 @@
 				FDF1E9B3168F54FC0097B5E0 /* MCUserManagerModel.m in Sources */,
 				FDF1E9B6168F591C0097B5E0 /* MCDBController.m in Sources */,
 				FDA4847816907EB2001FB200 /* MCUserCalculator.m in Sources */,
+				FDA4847D16908C93001FB200 /* MCUserManagerController.m in Sources */,
+				FD0BE80E1695EBA3009CD589 /* PopCreateUserViewController.m in Sources */,
+				FD0BE8141695EF2E009CD589 /* PopChangeUserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

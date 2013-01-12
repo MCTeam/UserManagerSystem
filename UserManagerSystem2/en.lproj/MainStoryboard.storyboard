@@ -101,6 +101,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeUserPress:" destination="2" eventType="touchUpInside" id="ZS6-QC-uTP"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="用户统计信息" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="X9V-2M-5Na">
                                 <rect key="frame" x="718" y="278" width="102" height="21"/>
@@ -178,6 +181,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="createUserPress:" destination="2" eventType="touchUpInside" id="0Ff-ep-Hvc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -195,9 +201,26 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-2444" y="-465"/>
+            <point key="canvasLocation" x="-5196" y="-33"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="UserManagerSystemViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserManagerSystemViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="changeUserPress:"/>
+                <relationship kind="action" name="createUserPress:"/>
+                <relationship kind="outlet" name="currentUserLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="insertRecordMoveField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="insertRecordTimeField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="insertRecordUserNameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="scoreTable" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="totalGamesLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalMovesLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalTimesLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation" orientation="landscapeRight"/>

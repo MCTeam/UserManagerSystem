@@ -15,4 +15,6 @@
 @property (retain, nonatomic) NSMutableArray *allUser;
 @property (retain, nonatomic) NSMutableArray *topScore;
 
++ (MCUserManagerModel*) sharedInstance;
+
 @end

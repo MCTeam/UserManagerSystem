@@ -7,10 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "sqlite3.h"
+#import "MCUser.h"
+#import "MCScore.h"
+
+#define DBName @"MCDatabase.sqlite3"
 
 @interface MCDBController : NSObject
+{
+    @private sqlite3 *database;
+}
 
-- (void)initDatabase;
-
++ (MCDBController*) sharedInstance;
+- (void) insertUser:(MCUser*)_user;
+- (MCUser*) queryUser:(NSString*)_name;
+- (NSMutableArray*) queryAllUser;
 
 @end

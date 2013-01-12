@@ -7,13 +7,17 @@
 //
 
 #import "MCUserCalculator.h"
+#define highestScore 99999
+#define moveWeight 50
+#define timeWeight 50
 
 @implementation MCUserCalculator
 
 -(NSInteger)calculateScoreForMove:(NSInteger)move Time:(double)time
 {
     //expression of calculating the total score for each time
-    return 1;
+    NSInteger score = highestScore - move*moveWeight - time*timeWeight;
+    return score;
 }
 
 -(double)calculateSpeedForMove:(NSInteger)move Time:(double)time

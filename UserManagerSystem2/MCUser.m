@@ -17,16 +17,25 @@
 @synthesize totalMoves;
 @synthesize totalTimes;
 
-- (void)User:(NSInteger)ID UserName:(NSString *)NAME UserSex:(NSString *)SEX totalGames:(NSInteger)GAMES totalMoves:(NSInteger)MOVES totalTimes:(double)TIMES
+- (id)initWithUserID:(NSInteger)_ID UserName:(NSString *)_name UserSex:(NSString *)_sex totalGames:(NSInteger)_games totalMoves:(NSInteger)_moves totalTimes:(double)_times
 {
-    self.userID = ID;
-    self.name = NAME;
-    self.sex = SEX;
-    self.totalGames = GAMES;
-    self.totalMoves = MOVES;
-    self.totalTimes = TIMES;
+    if (self = [self init]) {
+        [_name retain];
+        [_sex retain];
+        [self.name release];
+        [self.sex release];
+        
+        self.userID = _ID;
+        self.name = _name;
+        self.sex = _sex;
+        self.totalGames = _games;
+        self.totalMoves = _moves;
+        self.totalTimes = _times;
+    }
     
+    return self;
 }
+
 
 -(void)dealloc
 {
