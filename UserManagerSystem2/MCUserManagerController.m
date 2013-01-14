@@ -8,12 +8,15 @@
 
 #import "MCUserManagerController.h"
 
+#define userFile @"userFile.txt"
+
 @implementation MCUserManagerController
 
 static MCUserManagerController* sharedSingleton_ = nil;
 
 @synthesize userModel;
 @synthesize database;
+@synthesize calculator;
 
 #pragma mark -
 #pragma mark single instance methods
@@ -51,17 +54,34 @@ static MCUserManagerController* sharedSingleton_ = nil;
     //do nothing
 }
 
+- (NSString *)dataFilePath 
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDirectory = [paths objectAtIndex:0];
+    
+    return [documentDirectory stringByAppendingPathComponent:userFile];
+}
+
+
 - (id)init
 {
     if (self = [super init]) {
         database = [MCDBController allocWithZone:NULL];
         userModel = [MCUserManagerModel allocWithZone:NULL];
+        calculator = [MCUserCalculator alloc];
         
         //init all users from database
-        [self updataAllUser];
+        [self updateAllUser];
+        NSData *lastUser = [[NSData alloc] initWithContentsOfFile:[self dataFilePath]];
+        NSString *lastName = [[NSString alloc] initWithData:lastUser encoding:NSStringEncodingConversionExternalRepresentation];
+        [self changeCurrentUser:lastName];
+        
+        //init top score
+        [self updateTopScore];
         
         //add observer to database and user model
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(insertSuccessMethod:) name:@"DBInsertSuccess" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(insertUserSuccess:) name:@"DBInsertUserSuccess" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(insertScoreSuccess) name:@"DBInsertScoreSuccess" object:nil];
     }
     
     return self;
@@ -71,9 +91,12 @@ static MCUserManagerController* sharedSingleton_ = nil;
 {
     [database release];
     [userModel release];
+    [calculator release];
     [super dealloc];
 }
 
+#pragma mark -
+#pragma mark user methods
 - (void)createNewUser:(NSString *)_name
 {
     MCUser *newUser = [[MCUser alloc] initWithUserID:0 UserName:_name UserSex:@"unknown" totalGames:0 totalMoves:0 totalTimes:0];
@@ -88,20 +111,74 @@ static MCUserManagerController* sharedSingleton_ = nil;
         }
     }
     NSLog(@"change user");
+    
+    [self saveCurrentUser];
 }
 
-- (void) insertSuccessMethod:(NSNotification*)_notification
+- (void) insertUserSuccess:(NSNotification*)_notification
 {
-    [self updataAllUser];
+    //after insert successful, update information
+    [self updateAllUser];
     
     NSString* name = [[NSString alloc] initWithString:[_notification.userInfo objectForKey:@"name"]];
     [self changeCurrentUser:name];
 }
 
-- (void)updataAllUser
+- (void)updateAllUser
 {
     userModel.allUser = [database queryAllUser];
-    NSLog(@"updata all user");
+    NSLog(@"update all user");
 }
 
+- (void)updateCurrentUser
+{
+    userModel.currentUser = [database queryUser:userModel.currentUser.name];
+}
+
+#pragma mark
+#pragma mark score methods
+- (void)createNewScoreWithMove:(NSInteger)_move Time:(double)_time
+{
+    NSInteger _score = [calculator calculateScoreForMove:_move Time:_time];
+    double _speed = [calculator calculateSpeedForMove:_move Time:_time];
+    NSString* _date = [[[NSDate alloc] init] description];
+    
+    MCScore* newScore = [[MCScore alloc] initWithScoreID:0 userID:userModel.currentUser.userID name:userModel.currentUser.name score:_score move:_move time:_time speed:_speed date:_date];    
+    [database insertScore:newScore];
+}
+
+- (void) insertScoreSuccess
+{
+    //after insert successful, update information
+    [self updateTopScore];
+    //[self updateMyScore];
+    
+    [self updateAllUser];
+    [self updateCurrentUser];
+    
+    //post notification to view controller to refresh view
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"UserManagerSystemUpdateScore" object:nil];
+}
+
+- (void)updateTopScore
+{
+    userModel.topScore = [database queryTopScore];
+    NSLog(@"update top score");
+}
+
+- (void)updateMyScore
+{
+    userModel.myScore = [database queryMyScore:userModel.currentUser.userID];
+    NSLog(@"update my score");
+}
+
+
+
+- (void)saveCurrentUser
+{
+    //save current user to file
+    NSData *lastUser = [[NSData alloc] initWithBytes:userModel.currentUser.name length:[userModel.currentUser.name lengthOfBytesUsingEncoding:NSStringEncodingConversionExternalRepresentation]]; 
+    [lastUser writeToFile:[self dataFilePath] atomically:YES];
+    [lastUser release];
+}
 @end

@@ -12,13 +12,14 @@
 
 @synthesize scoreID;
 @synthesize userID;
+@synthesize name;
 @synthesize score;
 @synthesize move;
 @synthesize time;
 @synthesize speed;
 @synthesize date;
 
-- (id)initWithScoreID:(NSInteger)_sID userID:(NSInteger)_uID score:(NSInteger)_score move:(NSInteger)_move time:(double)_time speed:(double)_speed date:(NSString *)_date
+- (id)initWithScoreID:(NSInteger)_sID userID:(NSInteger)_uID name:(NSString*)_name score:(NSInteger)_score move:(NSInteger)_move time:(double)_time speed:(double)_speed date:(NSString *)_date
 {
     if (self = [self init]) {
 
@@ -27,6 +28,7 @@
         
         self.scoreID = _sID;
         self.userID = _uID;
+        self.name = _name;
         self.score = _score;
         self.move = _move;
         self.time = _time;
@@ -38,6 +40,7 @@
 
 - (void)dealloc
 {
+    [name release];
     [date release];
     [super dealloc];
 }

@@ -23,4 +23,9 @@
 - (MCUser*) queryUser:(NSString*)_name;
 - (NSMutableArray*) queryAllUser;
 
+- (void) insertScore:(MCScore*)_score;
+- (NSMutableArray*) queryTopScore;
+- (NSMutableArray*) queryMyScore:(NSInteger)_userID;
+
+- (void)insertScoreUpdateUser:(MCScore*)_score;
 @end

@@ -11,6 +11,7 @@
 #import "MCUser.h"
 #import "MCScore.h"
 #import "MCUserManagerModel.h"
+#import "MCUserCalculator.h"
 
 @interface MCUserManagerController : NSObject{
     
@@ -18,12 +19,19 @@
 
 @property (nonatomic, retain) MCDBController* database;
 @property (nonatomic, retain) MCUserManagerModel* userModel;
+@property (nonatomic, retain) MCUserCalculator* calculator;
 
 + (MCUserManagerController*) sharedInstance;
 
 - (void) createNewUser:(NSString*)_name;
 - (void) changeCurrentUser:(NSString*)_name;
-- (void) updataAllUser;
-- (void) updataCurrentUser;
+- (void) updateAllUser;
+- (void) updateCurrentUser;
+
+- (void) createNewScoreWithMove:(NSInteger)_move Time:(double)_time;
+- (void) updateTopScore;
+- (void) updateMyScore;
+
+- (void) saveCurrentUser;
 
 @end

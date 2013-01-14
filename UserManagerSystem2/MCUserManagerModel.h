@@ -14,6 +14,7 @@
 @property (retain, nonatomic) MCUser *currentUser;
 @property (retain, nonatomic) NSMutableArray *allUser;
 @property (retain, nonatomic) NSMutableArray *topScore;
+@property (retain, nonatomic) NSMutableArray *myScore;
 
 + (MCUserManagerModel*) sharedInstance;
 

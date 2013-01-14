@@ -11,6 +11,8 @@
 		FD0BE80F1695EBA3009CD589 /* PopCreateUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD0BE80D1695EBA3009CD589 /* PopCreateUserViewController.xib */; };
 		FD0BE8141695EF2E009CD589 /* PopChangeUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0BE8121695EF2E009CD589 /* PopChangeUserViewController.m */; };
 		FD0BE8151695EF2E009CD589 /* PopChangeUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD0BE8131695EF2E009CD589 /* PopChangeUserViewController.xib */; };
+		FD18B62116A35059003C8C9C /* ScoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD18B62016A35059003C8C9C /* ScoreCell.m */; };
+		FD18B62316A35083003C8C9C /* ScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD18B62216A35083003C8C9C /* ScoreCell.xib */; };
 		FD7EEB031690DB0300CC5496 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7EEB021690DB0300CC5496 /* libsqlite3.dylib */; };
 		FDA4847816907EB2001FB200 /* MCUserCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA4847716907EB2001FB200 /* MCUserCalculator.m */; };
 		FDA4847D16908C93001FB200 /* MCUserManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA4847C16908C93001FB200 /* MCUserManagerController.m */; };
@@ -35,6 +37,9 @@
 		FD0BE8111695EF2E009CD589 /* PopChangeUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopChangeUserViewController.h; sourceTree = "<group>"; };
 		FD0BE8121695EF2E009CD589 /* PopChangeUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopChangeUserViewController.m; sourceTree = "<group>"; };
 		FD0BE8131695EF2E009CD589 /* PopChangeUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopChangeUserViewController.xib; sourceTree = "<group>"; };
+		FD18B61F16A35059003C8C9C /* ScoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreCell.h; sourceTree = "<group>"; };
+		FD18B62016A35059003C8C9C /* ScoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreCell.m; sourceTree = "<group>"; };
+		FD18B62216A35083003C8C9C /* ScoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreCell.xib; sourceTree = "<group>"; };
 		FD7EEB021690DB0300CC5496 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		FDA4847616907EB2001FB200 /* MCUserCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUserCalculator.h; sourceTree = "<group>"; };
 		FDA4847716907EB2001FB200 /* MCUserCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUserCalculator.m; sourceTree = "<group>"; };
@@ -133,6 +138,9 @@
 				FD0BE8111695EF2E009CD589 /* PopChangeUserViewController.h */,
 				FD0BE8121695EF2E009CD589 /* PopChangeUserViewController.m */,
 				FD0BE8131695EF2E009CD589 /* PopChangeUserViewController.xib */,
+				FD18B61F16A35059003C8C9C /* ScoreCell.h */,
+				FD18B62016A35059003C8C9C /* ScoreCell.m */,
+				FD18B62216A35083003C8C9C /* ScoreCell.xib */,
 				FDF1E991168F38F60097B5E0 /* Supporting Files */,
 			);
 			path = UserManagerSystem2;
@@ -220,6 +228,7 @@
 				FDF1E99E168F38F60097B5E0 /* MainStoryboard.storyboard in Resources */,
 				FD0BE80F1695EBA3009CD589 /* PopCreateUserViewController.xib in Resources */,
 				FD0BE8151695EF2E009CD589 /* PopChangeUserViewController.xib in Resources */,
+				FD18B62316A35083003C8C9C /* ScoreCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +250,7 @@
 				FDA4847D16908C93001FB200 /* MCUserManagerController.m in Sources */,
 				FD0BE80E1695EBA3009CD589 /* PopCreateUserViewController.m in Sources */,
 				FD0BE8141695EF2E009CD589 /* PopChangeUserViewController.m in Sources */,
+				FD18B62116A35059003C8C9C /* ScoreCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

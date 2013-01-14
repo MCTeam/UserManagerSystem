@@ -71,7 +71,10 @@
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    userManagerController.userModel.currentUser = [userManagerController.userModel.allUser objectAtIndex:row];
+    //userManagerController.userModel.currentUser = [userManagerController.userModel.allUser objectAtIndex:row];
+    MCUser *user = [userManagerController.userModel.allUser objectAtIndex:row];
+    NSString *name = [[NSString alloc] initWithString:user.name];
+    [userManagerController changeCurrentUser:name];
 }
 
 

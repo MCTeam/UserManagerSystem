@@ -16,6 +16,7 @@ static MCUserManagerModel* sharedSingleton_ = nil;
 @synthesize currentUser;
 @synthesize allUser;
 @synthesize topScore;
+@synthesize myScore;
 
 #pragma mark implement singleton
 + (MCUserManagerModel *)sharedInstance
@@ -59,6 +60,7 @@ static MCUserManagerModel* sharedSingleton_ = nil;
         currentUser = [[MCUser alloc] init];
         allUser = [[NSMutableArray alloc] init];
         topScore = [[NSMutableArray alloc] init];
+        myScore = [[NSMutableArray alloc] init];
     }
     
     return self;

@@ -10,6 +10,7 @@
 #import "MCUserManagerController.h"
 #import "PopCreateUserViewController.h"
 #import "PopChangeUserViewController.h"
+#import "ScoreCell.h"
 
 @interface UserManagerSystemViewController : UIViewController
     <UITableViewDelegate, UITableViewDataSource, UIPopoverControllerDelegate>
@@ -19,9 +20,8 @@
 
 @property (retain, nonatomic) IBOutlet UITableView *scoreTable;
 
-@property (retain, nonatomic) IBOutlet UITextField *insertRecordUserNameField;
-@property (retain, nonatomic) IBOutlet UITextField *insertRecordTimeField;
-@property (retain, nonatomic) IBOutlet UITextField *insertRecordMoveField;
+@property (retain, nonatomic) IBOutlet UITextField *insertScoreTimeField;
+@property (retain, nonatomic) IBOutlet UITextField *insertScoreMoveField;
 
 @property (retain, nonatomic) IBOutlet UILabel *currentUserLabel;
 
@@ -34,4 +34,7 @@
 
 - (IBAction)createUserPress:(id)sender;
 - (IBAction)changeUserPress:(id)sender;
+- (IBAction)insertScorePress:(id)sender;
+- (void)updateUserInformation;
+- (void)updateScoreInformation;
 @end
