@@ -48,7 +48,7 @@
     currentUserLabel.text = userManagerController.userModel.currentUser.name;
     totalGamesLabel.text = [[NSString alloc] initWithFormat:@"%d",userManagerController.userModel.currentUser.totalGames];
     totalMovesLabel.text = [[NSString alloc] initWithFormat:@"%d",userManagerController.userModel.currentUser.totalMoves];
-    totalTimesLabel.text = [[NSString alloc] initWithFormat:@"%d",userManagerController.userModel.currentUser.totalTimes];
+    totalTimesLabel.text = [[NSString alloc] initWithFormat:@"%0.2f",userManagerController.userModel.currentUser.totalTimes];
     
     //observer to refresh the table view
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateUserAndScore) name:@"UserManagerSystemUpdateScore" object:nil];

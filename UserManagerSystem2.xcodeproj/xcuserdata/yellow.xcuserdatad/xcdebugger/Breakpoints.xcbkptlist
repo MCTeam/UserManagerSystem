@@ -8,7 +8,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "UserManagerSystem2/MCUserManagerController.m"
-         timestampString = "379878171.984037"
+         timestampString = "379974938.168886"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "75"
@@ -21,20 +21,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "UserManagerSystem2/MCUserManagerController.m"
-         timestampString = "379878171.984037"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "76"
-         endingLineNumber = "76"
-         landmarkName = "-init"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "UserManagerSystem2/MCUserManagerController.m"
-         timestampString = "379878171.984037"
+         timestampString = "379974989.244433"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "77"
@@ -47,11 +34,24 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "UserManagerSystem2/MCUserManagerController.m"
-         timestampString = "379878171.984037"
+         timestampString = "379974989.244433"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "115"
-         endingLineNumber = "115"
+         startingLineNumber = "79"
+         endingLineNumber = "79"
+         landmarkName = "-init"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "UserManagerSystem2/MCUserManagerController.m"
+         timestampString = "379974989.244433"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "117"
+         endingLineNumber = "117"
          landmarkName = "-changeCurrentUser:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -60,11 +60,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "UserManagerSystem2/MCUserManagerController.m"
-         timestampString = "379878171.984037"
+         timestampString = "379975068.835004"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "180"
-         endingLineNumber = "180"
+         startingLineNumber = "189"
+         endingLineNumber = "189"
          landmarkName = "-saveCurrentUser"
          landmarkType = "5">
       </FileBreakpoint>
@@ -73,12 +73,51 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "UserManagerSystem2/MCUserManagerController.m"
-         timestampString = "379878171.984037"
+         timestampString = "379975068.835004"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "181"
-         endingLineNumber = "181"
+         startingLineNumber = "184"
+         endingLineNumber = "184"
          landmarkName = "-saveCurrentUser"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "UserManagerSystem2/MCUserManagerController.m"
+         timestampString = "379975055.651617"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "111"
+         endingLineNumber = "111"
+         landmarkName = "-changeCurrentUser:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "UserManagerSystem2/MCUserManagerController.m"
+         timestampString = "379975088.366878"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "112"
+         endingLineNumber = "112"
+         landmarkName = "-changeCurrentUser:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "UserManagerSystem2/PopChangeUserViewController.m"
+         timestampString = "379975298.183887"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "77"
+         endingLineNumber = "77"
+         landmarkName = "-pickerView:didSelectRow:inComponent:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

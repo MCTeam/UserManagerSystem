@@ -73,7 +73,9 @@ static MCUserManagerController* sharedSingleton_ = nil;
         //init all users from database
         [self updateAllUser];
         NSData *lastUser = [[NSData alloc] initWithContentsOfFile:[self dataFilePath]];
+        NSLog(@"load file: %s",[lastUser bytes]);
         NSString *lastName = [[NSString alloc] initWithData:lastUser encoding:NSStringEncodingConversionExternalRepresentation];
+        NSLog(@"to nsstring: %@",lastName);
         [self changeCurrentUser:lastName];
         
         //init top score
@@ -176,9 +178,16 @@ static MCUserManagerController* sharedSingleton_ = nil;
 
 - (void)saveCurrentUser
 {
+    if (userModel.currentUser.name != nil) {
     //save current user to file
-    NSData *lastUser = [[NSData alloc] initWithBytes:userModel.currentUser.name length:[userModel.currentUser.name lengthOfBytesUsingEncoding:NSStringEncodingConversionExternalRepresentation]]; 
+    const char *name = [userModel.currentUser.name UTF8String];
+    //NSData *lastUser = [[NSData alloc] initWithBytes:userModel.currentUser.name length:[userModel.currentUser.name length]]; 
+    NSData *lastUser = [NSData dataWithBytes:name length:strlen(name)];
+    
+    NSLog(@"user name: %s",[lastUser bytes]);
+    
     [lastUser writeToFile:[self dataFilePath] atomically:YES];
-    [lastUser release];
+    }
 }
+
 @end
